@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Newsletter Form Result</title>
+    <link rel="stylesheet" href="css/result.css" />
+  </head>
+  <body>
+    <div class="result">
+      <h1>Result</h1>
+      <p>The entered email is: <span id="emailOutput"></span></p>
+    </div>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const email = urlParams.get("email");
+
+      const emailOutputElement = document.getElementById("emailOutput");
+      emailOutputElement.textContent = email;
+    </script>
+  </body>
+</html>
